@@ -29,7 +29,7 @@ class WallpostController extends Controller
        return 204;
     }
 
-    public function update(Request $request , Wallpost $wallpost)
+    public function update(Request $request, Wallpost $wallpost)
     {
         $wallpost->update($request->all());
         return response()->json($wallpost, 200); //
