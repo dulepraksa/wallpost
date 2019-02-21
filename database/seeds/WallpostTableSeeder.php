@@ -14,7 +14,9 @@ class WallpostTableSeeder extends Seeder
     {
         // Let's truncate our existing records to start from scratch.
         Wallpost::truncate();
+
         $faker = \Faker\Factory::create();
+
         // And now, let's create a few articles in our database:
         for ($i = 0; $i < 20; $i++) {
             Wallpost::create([
