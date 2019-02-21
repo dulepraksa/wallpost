@@ -15,6 +15,13 @@ class CreateWallpostsTable extends Migration
     {
         Schema::create('wallposts', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->longText('body');
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('rating')->nullable();
+            $table->string('wp_attachment')->nullable();
+            $table->integer('wp_views')->nullable();
             $table->timestamps();
         });
     }
