@@ -22,3 +22,5 @@ Route::get('wallpost/{wallpost}', 'WallpostController@show');
 Route::post('wallpost', 'WallpostController@store');
 Route::put('wallpost/{wallpost}', 'WallpostController@update');
 Route::delete('wallpost/{wallpost}', 'WallpostController@delete');
+Route::post( 'register' , 'Auth\RegisterController@register');
+Route::post('login', 'Auth\LoginController@login');
