@@ -23,5 +23,13 @@ Route::get('wallpost/{wallpost}', 'WallpostController@show');
 Route::post('wallpost', 'WallpostController@store');
 Route::put('wallpost/{wallpost}', 'WallpostController@update');
 Route::delete('wallpost/{wallpost}', 'WallpostController@delete');
+
+Route::get('comment', 'CommentsController@index');
+Route::get('comment/{comment}', 'CommentsController@show');
+Route::post('comment', 'CommentsController@store');
+Route::put('comment/{comment}', 'CommentsController@edit');
+Route::delete('comment/{comment}', 'CommentsController@delete');
+
+
 Route::post( 'register' , 'Auth\RegisterController@register');
 Route::get('login', 'Auth\LoginController@login');
