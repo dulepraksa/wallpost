@@ -30,12 +30,22 @@ class User extends Authenticatable
     ];
 
 
-    public function generateToken()
-    {
-        $this->api_token = str_random(60);
-        $this->save();
+    // public function generateToken()
+    // {
+    //     $this->api_token = str_random(60);
+    //     $this->save();
 
-        return $this->api_token;
+    //     return $this->api_token;
+    // }
+
+    public function wallpost()
+    {
+        return $this->hasMany('App\Wallpost');
+    }
+
+    public function comments() 
+    {
+        return $this->hasMany('App\Comment');
     }
 
 }
