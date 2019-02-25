@@ -14,7 +14,8 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+	return Auth::guard('api')->user();
+    // return $request->user();
 });
 
 Route::get('wallpost', 'WallpostController@index');
@@ -23,4 +24,4 @@ Route::post('wallpost', 'WallpostController@store');
 Route::put('wallpost/{wallpost}', 'WallpostController@update');
 Route::delete('wallpost/{wallpost}', 'WallpostController@delete');
 Route::post( 'register' , 'Auth\RegisterController@register');
-Route::post('login', 'Auth\LoginController@login');
+Route::get('login', 'Auth\LoginController@login');
