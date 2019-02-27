@@ -12,3 +12,45 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+
+
+html, body {
+  height: 100%;
+  padding-top: 10px;
+  background: #e6ecf1;
+}
+
+/*.wallpost {
+  
+  margin: 0 auto;
+  padding-bottom: 15px;
+}*/
+
+
+.wallpost {
+    max-width: 500px;
+    margin: 30px auto;
+    border: 2px solid grey;
+    padding:15px 5px 15px 5px;
+    background-color:#ffffff;
+    
+     
+    &__title {
+        font-size: 20px;
+        
+    }
+
+    &__body {
+        font-size:15px;
+    }
+
+    &__wallposts-move {
+  	    transition: transform 1s;
+	}
+
+	&__button{
+		color: #00d1b2;
+		position:relative;
+	}
+}

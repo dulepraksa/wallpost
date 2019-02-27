@@ -2,9 +2,9 @@
 <div>
      <div class="wallpost" v-for="wallpost in wallposts">
          <p>
-         <strong>{{wallpost.title}}</strong>
+         <strong class=wallpost__title>{{wallpost.title}}</strong><button>...</button>
             <br>
-            {{wallpost.body}}
+            <p class=wallpost__body>{{wallpost.body}}</p>
         </p>
     </div>
 </div>
